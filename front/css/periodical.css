@@ -1,0 +1,214 @@
+/*期刊标签特效*/
+body .particletext {
+  text-align: center;
+  font-size: 28px;
+  position: relative;
+}
+
+body .particletext.confetti > .particle {
+  opacity: 0;
+  position: absolute;
+  -webkit-animation: confetti 3s ease-in infinite;
+          animation: confetti 3s ease-in infinite;
+}
+body .particletext.confetti > .particle.c1 {
+  background-color: rgba(76, 175, 80, 0.5);
+}
+body .particletext.confetti > .particle.c2 {
+  background-color: rgba(156, 39, 176, 0.5);
+}
+@-webkit-keyframes confetti {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0%) rotate(0deg);
+            transform: translateY(0%) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  35% {
+    -webkit-transform: translateY(-800%) rotate(270deg);
+            transform: translateY(-800%) rotate(270deg);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000%) rotate(1440deg);
+            transform: translateY(2000%) rotate(1440deg);
+  }
+}
+@keyframes confetti {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0%) rotate(0deg);
+            transform: translateY(0%) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  35% {
+    -webkit-transform: translateY(-800%) rotate(270deg);
+            transform: translateY(-800%) rotate(270deg);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000%) rotate(1440deg);
+            transform: translateY(2000%) rotate(1440deg);
+  }
+}
+
+/*框架*/
+@charset "utf-8";
+/* CSS Document */
+body{background-color:rgb(245,245,245);/*浅灰色*/}
+
+.main{ margin-top:90px;
+	margin-left:100px;
+	text-align:center;
+	width:85%;
+	height:auto;
+	/*background-color:#00F;深蓝色*/
+	}
+
+/*中间上半部分 标签*/	
+.title{
+	font-size:25px;
+	color:#000;
+	padding-left:25px;
+	display:inline-block;
+	margin-right:40px;
+	}
+/*标签*/
+.bq {
+	border:none;
+	background-color:#FFF;
+	}
+.main .main-below-right  .bq{ 
+	
+	text-decoration: none;
+	cursor: pointer;
+	font-size:20px;
+	color:#999;
+	outline: none;
+	padding: 0px 10px;
+	}
+.main .main-below-right .bq:hover{
+	color:#CCC;
+	}	
+.main .main-below-right a{ 
+	display:inline-block;
+	margin-right:20px;
+	text-decoration: none;
+	cursor: pointer;
+	font-size:15px;
+	color:#999;
+	padding-top:30px;
+	}
+.main .main-below-right a:hover{
+	color:#CCC;;
+	}
+
+/*中间下半部分*/
+.main-below{
+	min-height:600px;
+	overflow: hidden;
+	position: relative;
+	margin: 10px auto 60px;
+	border: 1px solid #CFD4D7;
+	border-radius: 3px;
+	/*margin-left:20px;
+	margin-top:10px;*/
+	background-color:#FFF;/*白色*/
+	}
+/*中间下半部分左边样式*/	
+.main-below-left{
+	float: left;
+	width: 179px;
+	height:auto;
+	background-color:#FFF;/*白色*/
+	}	
+.bigtext {
+    font-family: 'Hiragino Sans GB','Microsoft Yahei';
+	font-weight: normal;
+	padding: 0;
+}	
+#type {
+	padding-top:20px;
+}
+
+#type h3 {
+	padding-top:10px;
+}
+
+#type h3 {
+	margin:0 30px;
+	border-bottom:1px solid #E6E9EB;
+	font-size:18px;
+	line-height:40px;
+	text-align:center;
+}
+
+#type li {
+	position:relative;
+	margin-top:60px;
+	text-align:center;
+	line-height:24px;
+
+}
+
+#type b {
+	display:block;
+	width:48px;
+	height:48px;
+	margin:0 auto 5px;
+	background:url(../images/periodical/type.png) no-repeat;/*碟片*/
+}
+ a{
+  text-decoration:none;
+}
+.bigtext a:hover{
+	color:#333;
+	}
+
+#type .new b{
+    background-position: -96px -240px;
+}
+#type .hot b{
+    background-position: -48px -240px;
+}
+#type .pop/*:hover*/ b{
+    background-position: 0 -240px;
+}
+
+
+/*中右主体*/
+.main-below-right{
+    margin-left: 200px;
+}
+.main-below-right-down/*主体*/
+{
+	width:100%;
+	height:700px;;
+}
+*{margin:0;padding:0;}
+.main-below-right-down .page{position:absolute; top:700px; left:550px;font-size:15px;margin:10px auto;text-align:left;width:700px;}
+.main-below-right-down .page .abq{ margin-left:4px; color:#555;font-size:15px;cursor:pointer;text-decoration:none }
+.main-below-right-down .page .abq,.page span{margin-right:4px;padding:3px 8px;margin-left:2px;line-height:20px;background:#f9f9f9;border:1px solid #dbdbdb;text-decoration:none;border-radius:2px;color:#333}
+.main-below-right-down .page .abq:hover,.page span.cur{ font-size:15px;background-color:#999;color:#fff;border:1px solid #999;cursor:pointer}
+ .main-below-right-down .page span.tip{font-size:15px;margin-left:10px;border:0 none; background:none}
+	
+.main-below-right h3{
+	margin:0px 30px;
+	border-bottom:1px solid #E6E9EB;
+	font-size:18px;
+	line-height:40px;
+	text-align:center;
+	padding-top:20px;
+}
+.main-below-right-down .page .ab{ width:20px; height:26px; margin-right:12px; color:#555;font-size:15px;cursor:pointer;text-decoration:none; padding:0px;}
+

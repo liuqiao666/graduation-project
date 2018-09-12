@@ -1,0 +1,275 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: "微软雅黑";
+}
+ul li{
+	list-style-type: none;
+}
+
+/*播放器外框*/
+
+.audiobox{
+	width: 100%;
+	height:110px;
+	background-color:#FFF;
+	/*background-color: rgba(0,0,0,1);黑色*/
+	color:#FFF;/*白色*/
+	border: solid 1px #CCC;
+}
+/*播放器内容包裹部分*/
+.audio-container{
+	width: 90%;/*进度条长度*/
+	margin: auto;
+}
+.audio-view{
+	position: relative;
+	padding-left: 25%;/*图片与进度条之间的距离*/
+	padding-right: 20%;/*进度条与右边按钮的距离*/
+	height: 100px;/*进度条宽度*/
+}
+.audio-cover{/*歌曲图片*/
+	width: 11%;
+	height: 110%;
+	overflow: hidden;
+	position: absolute;
+	left: 10%;
+	top: 0;
+	border-left:1px dashed #CCC;
+	border-right:1px dashed #CCC;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color:#FFF;/*白色--图片背景色*/
+}
+.audio-cover img{
+	display: block;
+	height: 110%;
+	
+	margin: auto;
+}
+/*进度条主体*/
+.audio-body{
+	padding: 0 10px;
+}
+.audio-title{/*歌名*/
+	font-weight: 400;
+	font-size: 18px;
+	padding-left:230px;
+	padding-top:0px;
+	line-height: 40px;
+	overflow: hidden;
+	color:#000;
+}
+.audio-backs{
+	position: relative;
+	padding-left: 60px;
+	padding-right: 60px;
+	margin-top: 8%;/*进度条与歌名的距离*/
+	height: 20px;
+}
+.audio-this-time,
+.audio-count-time{
+	position: absolute;
+	top: 0;
+	width: 10%;
+	height: 5%;
+	font-size: 16px;
+	color:#000;
+	line-height: 20px;
+}
+.audio-this-time{
+	left: 0;
+}
+.audio-count-time{
+	right: 0;
+	text-align: right;
+}
+.audio-setbacks{
+	height: 6px;
+	border-radius: 3px;
+	background-color:rgba(0,0,0, 0.6);/*整个进度条颜色*/
+}
+.audio-setbacks{
+	position: relative;
+	top: 30%;
+}
+.audio-cache-setbacks,
+.audio-this-setbacks{
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 3px;
+}
+.audio-cache-setbacks{
+	background-color:#CCC;/*缓存进度的颜色 灰色*/
+	z-index: 1;
+	cursor: pointer;
+}
+.audio-this-setbacks{
+	background-color:#666;/*已播放进度条颜色 深灰*/
+	z-index: 2;
+}
+.audio-backs-btn{/*进度条小按钮*/
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	margin-top: -7px;
+	top: 50%;
+	right: -7px;
+	background-color:#000;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.audio-btn{
+	position: absolute;
+	/*width: 150px;*/
+	height: 100px;
+	right: 34%;
+	top: 0px;
+}
+.audio-select{
+	margin-top: 22%;
+	height: 25px;
+	width: 190px;
+	float: right;
+}
+.audio-select > div{
+	width: 30px;
+	height: 30px;
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	float: left;
+	border-radius:20px;
+	cursor: pointer;
+}
+.audio-select > div + div{
+	margin-left: 45px;
+}
+.audio-prev{/*上一首*/
+	background-image:url(../images/sys.jpg);
+}
+.audio-next{/*下一首*/
+	background-image: url(../images/xys.jpg);
+}
+.audio-play{
+	background-image: url(../images/zt.jpg);
+}
+.audio-stop{
+	background-image:url(../images/bf.jpg);
+}
+.audio-volume{
+	position:absolute;
+	top:76px;
+	right:130px;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image:url(../images/lb.png);
+}
+.audio-list{/*歌单*/
+	color: #000;
+	background-color: #fff;
+	bottom: 100px;
+	border: 1px solid #ccc;
+	width: 100%;
+	padding-top: 10px;
+	
+}
+.audio-list-head{
+	position: relative;
+	padding-bottom: 10px;
+}
+.audio-list-head p{
+	padding-left: 8px;
+	font-size: 18px;
+}
+.audio-list-head span{
+	position: absolute;
+	right: 8px;
+	top: 0;
+	font-size: 12px;
+	display: block;
+	width: 35px;
+	line-height: 25px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+}
+.audio-inline{
+	min-height:300px;
+	max-height: 800px;
+	overflow-y: scroll;/*滑动条*/
+}
+.audio-inline li{
+	font-size: 16px;
+	line-height: 2;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-top: 1px solid #ccc;
+}
+.audio-inline a{
+	font-size: inherit;
+	color: inherit;
+	text-decoration: none;
+	height: 32px;
+	overflow: hidden;
+	display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.menu-show,
+.audio-show-volume{
+	display: block !important;
+}
+.audio-set-volume{/*音量条*/
+	background-color: #000;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	right: 130px;
+	bottom: 25px;
+	width: 30px;
+	height: 73px;
+	z-index: 999;
+	display: none;
+}
+.volume-box{
+	width: 5px;
+	margin: auto;
+	display: block;
+	position: relative;
+	background-color:#000;/*未占据的音量条颜色*/
+	border-radius: 2.5px;
+	height: 60px;
+	bottom: -10px;
+}
+.volume-box span{
+	display: block;
+	width: 11px;
+	height: 11px;
+	position: absolute;
+	background-color: #fff;/*音量滑动小圆键颜色*/
+	border-radius: 50%;
+	margin-left: -5.5px;
+	margin-top: -5.5px;
+	left: 50%;
+	cursor: pointer;
+}
+.volume-box i{
+	position: absolute;
+	width: 100%;
+	border-radius: 2.5px;
+	background-color: #c70c0c;/*占据的音量条颜色*/
+	height: 0;
+	display: block;
+	bottom: 0;
+}

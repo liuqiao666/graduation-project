@@ -1,0 +1,516 @@
+@charset "utf-8";
+/* CSS Document */
+body{background-color:rgb(245,245,245);/*浅灰色*/}
+
+.main{ margin-top:80px;
+	margin-left:100px;
+	width:85%;
+	height:auto;
+	background-color:#FFF;
+	}
+.back{
+	width:100%;
+	height:auto;
+	}
+.back-p{
+	width:100%;
+	height:100%;
+	/*background-color:#6F0;*/
+	float:left;
+	display:block;
+	}
+.back-p a{
+	font-family:"Courier New", Courier, monospace;
+	font-size:20px;
+	text-align:left;
+	color:#999;
+	}	
+
+/*信息框*/
+.main-left{  	/*中间左边部分的外圈大框*/
+	width:100%;
+	height:auto;
+	margin-top:10px;
+	background-color:#FFF;/*白色*/
+	font-size:20px;
+	float:left;
+	border: 1px solid #CFD4D7;
+	border-radius:5px;
+	}
+.main-left-text{ font-size:22px;
+	font:'黑体';
+	}
+.main-left1{
+	background-color:#42A0CE;/*中间左边部分第一个标题框*/
+	height:30px;
+	margin:10px;/*元素边框与周围的距离*/
+}	
+.main-left2{ 
+	height:200px;/*中间左边第一个内容大框*/
+	/*background-color:#6FF;荧光蓝色*/
+	margin:12px;
+	 border-bottom: 1px dashed #CCC;
+	}
+.main-left2-1{ width:20%;
+	height:90%;
+	font-size:12px;
+	overflow:hidden;
+	margin:12px;
+	/*background-color:#909;深紫色*/
+	float:left;/*使图片横排排列*/
+	}
+.main-left .main-left2 .main-left2-1 img{
+	width:100%;
+	height:100%;
+	}
+.main-left2-2{ width:70%;
+	height:90%;
+	font-size:12px;
+	overflow:hidden;
+	margin:12px;
+	position:relative;
+	/*background-color:#909;深紫色*/
+	float:left;/*使图片横排排列*/
+	}
+h2{
+	font-size:16px;
+	font:  "Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+.cdinfo {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0 5px 0;
+    position: relative;
+}
+.cdinfo ul li {
+    line-height: 22px;
+}
+.cdinfo ul li span {
+    color: #999;
+}
+a {
+    text-decoration: none;
+    color:#3366cc;
+    cursor: pointer;
+}
+
+
+
+/*sharing-open*/
+/*播放器*/
+.sharing-audo{/*外圈*/
+	width:100%;
+	height:100px;
+	border-bottom: 1px dashed #CCC;
+	}
+.container{/*播放器*/
+	float:left;
+	width:700px;
+	margin-top:0px;
+	margin-left:20px;
+	
+	}
+
+/*分享、收藏*/
+#play {
+    position: relative;
+	height:90px;
+    /*border-bottom: 1px dashed #CCC;*/
+	font: 12px/1.2 "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#play .acts_list {
+    float: right;
+    clear: none;
+	padding-left:140px;
+	padding-top:40px;
+}
+
+/*sharing-open*/
+#play-2 {
+	float:left;
+	height:90px;
+	width:200px;
+	margin-left:200px;
+    /*border-bottom: 1px dashed #CCC;*/
+	font: 12px/1.2 "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#play-2 .acts_list {
+    clear: none;
+	padding-top:30px;
+}
+ul {
+    list-style: none;
+}
+.acts_list li {
+    float: left;
+    position: relative;
+}
+.collect {
+    position: relative;
+}
+.wrap {
+    float: left;
+    height: 50px;
+    margin: 0 10px;
+    line-height: 30px;
+    text-decoration: none;/*没有下划线*/
+    color: #666;
+    font-family: simsun;
+}
+
+.wrap i {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    background:url(../images/music_icon_v2.png) no-repeat;
+    vertical-align: middle;
+}
+.collect i {
+    background-position: 0 -64px;
+	
+	box-shadow: 0 0 6px #BBB;/*灰色*/
+	border-radius:20px;
+}
+.collect i:hover {
+	border-radius:20px;
+    box-shadow:0 0 5px 4px #FFF,0 0 2px 5px #BBB;/*水平偏移  垂直偏移 羽化 半径 颜色 （外/内部阴影）*/
+}
+
+
+	
+		
+/*歌单介绍*/
+/*periodical—_open*/
+.music_gd{
+	width:100%;
+	height:auto;
+	padding-left:20px;
+	overflow:hidden;
+	border-bottom: 1px dashed #CCC;
+	}
+
+.music_w{
+	width:100%;
+	height:auto;
+	}
+.f1{
+	color:#333;	
+	font: 18px/1.2 "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height:50px;
+	}
+.f2{
+	color: #666;
+	width:900px;
+	font-family: Arial,sans-serif;
+	font: 16px/1.2 "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height:30px;
+	}
+
+
+
+/*歌曲单*/
+.poo15{
+	padding-top:10px;
+	padding-left:20px;
+	padding-bottom:20px;
+	padding-right:20px;
+	background-color:#f9f9f9;
+	}	
+.music_p{
+	padding-bottom:10px;}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+	background-color:#FFF;
+}
+
+table.track_list {
+    font-size: 12px;
+    width: 100%;
+}
+
+table.track_list td.chkbox {
+    width: 20px;
+    vertical-align: middle;
+  
+}
+
+table.track_list td {
+    border-bottom: 1px #ebebeb solid;/*表格的下横线*/
+    padding: 6px 0;
+    *padding: 5px 0;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    cursor: pointer;
+    vertical-align: middle;
+}
+ input, select, textarea {
+    font: 12px "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+table.track_list td.song_name {
+    color:#3366cc;/*青色*/
+    width: 300px;
+    padding: 0 5px;
+    *padding: 2px 5px 0 5px;
+    word-break: break-all;
+}
+
+table.track_list td.player_via {
+    font-size: 11px;
+    color: #bbb;
+}/*没有明显效果*/
+
+table.track_list td.song_act {
+    width: 30px;
+    text-align: center;
+}
+
+/*包含小图标的div的class*/
+.song_do {
+    margin-left: 8px;
+    _margin: 0;
+}
+
+a.song_play {/*试听*/
+    background:url(../images/song_icon.gif) 0 0 no-repeat;
+}
+a.song_play, a.song_digg, a.song_download, a.song_toclt, a.song_tel {
+    float: left;
+    *display: inline;
+    width: 16px;
+    height: 17px;
+    display: block;
+    overflow: hidden;
+    text-indent: -9999em;
+    margin-left: 8px;
+}
+a {
+    text-decoration: none;
+    color: #3366cc;
+    cursor: pointer;
+}
+
+a.song_digg {/*分享*/
+    background:url(../images/song_icon.gif) -16px 0 no-repeat;
+}
+
+a.song_toclt {/*添加到收藏*/
+    background:url(../images/song_icon.gif) -48px 0 no-repeat;
+}
+
+/*打赏*/
+.content{
+		height:100px;
+		margin:40px auto;
+		}
+.p-shang{
+		width:100px;
+		height:100px;
+		text-align:center;
+		margin: 0 auto;
+		}
+.dashang{
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		line-height:98px;
+		font-size:22px;
+		border: 1px solid #dd5862;
+		display:block;
+		color:#fff;
+		background-color:#E74851;
+		text-align:center;
+		text-decoration:none;
+		transition: all 0.3s;
+		}
+.dashang:hover{
+		border: 1px solid #dd5862;
+		color:#E74851;
+		background-color:#FFF;
+		}
+.hide_box{/*让页面背景模糊*/
+		z-index:999;
+		background:#000;/*覆盖于页面上的背景色 黑色*/
+		opacity: 0.5;
+		left:0;
+		top:0;
+		height:99%;/*背景高度*/
+		width:100%;
+		position:fixed;
+		display:none;
+		}
+.shang_box{/*打赏主页面*/
+		width:540px;
+		height:500px;
+		padding:10px;
+		background-color:#fff;
+		border-radius:10px;
+		position:fixed;
+		z-index:1000;/*浮与表层*/
+		left:50%;
+		top:50%;
+		margin-left:-280px;
+		margin-top:-230px;
+		border:1px dotted #dedede;display:none;
+		}
+.shang_box img{
+		border:none;
+		border-width:0;
+		}
+.shang_close{/*关闭打赏*/
+		float:right;
+		display:inline-block;
+		}
+.shang_tit{
+		width: 100%;
+		height: 75px;
+		text-align: center;
+		background:url(../images/cy-reward-title-bg.jpg);
+		margin-top: 7px;
+		margin-right:2px;
+		}
+.shang_tit p{
+		color:#000;
+		text-align:center;
+		font-size:16px;
+		font-family: 'Microsoft YaHei';
+		line-height: 66px;
+		}	
+ /**/
+.shang_payimg{
+		height:160px;
+		width:160px;
+		padding:10px;
+		border:1px solid #EA5F00;
+		margin:0 auto;
+		border-radius:3px;
+		}
+.shang_payimg img{
+		display:block;
+		text-align:center;
+		width:160px;
+		height:160px;
+		}
+.pay_explain{
+		text-align:center;
+		margin:10px auto;
+		font-size:12px;
+		color:#545454;
+		}
+.shang_payselect{
+		text-align:center;
+		margin:0 auto;
+		margin-top:40px;
+		cursor:pointer;
+		height:60px;
+		width:280px;
+		}	
+.shang_payselect .pay_item{
+		display:inline-block;
+		margin-right:10px;float:left;
+		}	
+.radiobox{
+		width: 16px;
+		height: 16px;
+		background:url(../images/radio2.jpg);
+		display: block;
+		float: left;
+		margin-top: 5px;
+		margin-right: 14px;
+		}
+.checked .radiobox{
+		background:url(../images/radio1.jpg);
+		}
+.shang_logo{
+		display:block;
+		text-align:center;
+		margin:20px auto;
+		}	
+.shang_info{clear:both;}
+.shang_info p,.shang_info a{
+		color:#C3C3C3;
+		text-align:center;
+		font-size:12px;
+		text-decoration:none;
+		line-height:2em;
+		}
+
+
+
+/*评论*/
+.suggest_1 {/*blank40*/
+    margin-top: 40px;
+}
+.suggest h3 {/*comments_wall标题*/
+    font-size: 14px;
+	padding-left:20px;
+    line-height: 30px;
+    color:#f60;/*橙色*/
+	font-size: 14px;
+    line-height: 2;
+	position:relative
+}
+.suggest_2 {/*common_sec 包含输入框的div外的div*/
+    border-top: 1px #ddd solid;
+	/*border-bottom: 1px #ddd solid;*/
+}
+.suggest_form {/*wall_post form表单外的div*/
+    background:#f9f9f9;/*白色*/
+    padding: 10px;
+}
+
+.suggest .auto {/*textarea外的div*/
+    margin-left: 60px;
+	
+}
+.suggest textarea {
+    width: 98.5%;
+    height: 100px;
+}
+textarea {
+    font: normal 12px/1.5em Tahoma, simsun;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;/*在长单词或 URL 地址内部进行换行。*/
+	border-color: #7C7C7C #ccc #ccc #ddd;
+	border-style: solid;
+    border-width: 1px;
+    line-height: 1.2;
+    padding: 2px;
+}
+textarea:focus{/*点击时边框颜色*/
+	border-color:#F63;/*橙色*/
+	}
+/*按钮*/
+.suggest_form p.act {
+    float: right;
+    margin-top: 10px;
+}
+.suggest_form p.act span.suggest_counts {/*计数*/
+    font-size: 14px;
+    color:#999;/*深灰色*/
+    margin-right: 20px;
+}
+.suggest_counts {
+    line-height: 20px;
+}
+span.suggest_counts em {/*检查输入字数的数字的颜色*/
+    font-weight: bold;
+}
+.suggest_input, .suggest_input:focus {/*发表评论按钮*/
+    background:url(../images/bg_sprit2.gif) -129px -536px no-repeat;
+    width: 67px;
+}
+.suggest_input, .suggest_input:focus {
+    height: 27px;
+    color:#fff;/*白色*/
+    border: 0;
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 14px;
+    padding-bottom: 2px; 
+}

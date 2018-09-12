@@ -1,0 +1,336 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+  padding:0px;
+  margin:0px;
+}<!---->
+body{ background-color: rgb(245,245,245);
+	  font: 12px 'Helvetica Neue',Helvetica,Arial,sans-serif;
+     /* text-align:center;*/
+}
+/*轮播*/
+.wrapper{
+	width:85%;
+	margin-top:70px;
+	margin-left:7.5%;
+}
+ul{
+     list-style: none;
+  }
+.img_box{
+    position: relative;
+	width:100%;
+	height:400px;
+	overflow: hidden;   
+	border-radius:5px;
+	border:1px solid #CCC;
+        }
+.img_box ul.images{
+    width:100%;
+	height:400px;
+    position: relative;
+   /*overflow: hidden;*/
+        }
+.img_box ul.images li{
+    /*把三张图片脱标,根据js设定的zindex重叠到一起*/
+    position: absolute;
+    /*css3内容,是图片1s内线性速度变化*/
+    transition: 1s linear;
+	/*float: left;*/
+	width:100%;
+	height:400px;
+	overflow: hidden;/**/
+	background:#FFF;
+        }
+.img_box ul.images li img{
+    /*position: absolute;*/
+   /*top: 0;*/
+    width:100%;
+	height:400px;
+        }
+.img_box .arr{
+    width: 100%;
+    height: 40px;
+    /*background-color: red;*/
+    position: absolute;
+    top: 40%;
+    left:0%;
+    z-index: 100;
+        }
+.img_box .arr>div{
+    width: 40px;
+    height: 80px;
+    background-color: rgba(0,0,0,0.4);
+    line-height: 80px;
+    color: white;
+    cursor: pointer;/*光标呈现为指示链接的指针（一只手）。*/
+    float: left;
+    font-size: 36px;
+        }
+.img_box .arr .arr_left{
+     float: left;
+        }
+.img_box .arr .arr_right{
+    float: right;
+        }
+.img_box .circles{
+    position: absolute;
+    left: 50%;
+    margin-left: -38px;
+    bottom: 10px;
+    z-index: 100;
+        }
+.img_box .circles>li{
+    width: 12px;
+    height: 12px;
+    background-color:#F90;
+    border-radius: 50%;
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+        }
+.img_box .circles .active{
+     background-color: rgb(240,255,240);
+        }
+.wrap p {
+	display:block;
+	width:186px;
+	height:186px;
+	position:absolute;
+	left:0;
+	top:300px;
+	z-index:1;
+	background:transparent;
+	font-size:14px;
+	color:#333;
+	padding:0;
+	margin:0;
+	line-height:16px;
+	-webkit-transition: all 0.6s ease-in-out;
+}
+.wrap p span {
+	display:block;
+	text-align:left;
+	line-height:20px;
+	
+}
+.wrap a:hover p {
+	top:0;
+}
+
+
+
+/*主体*/
+.main{ 
+	width:100%;
+	height:auto;
+	margin-top:10px;
+	/*background-color:#60C;紫色*/
+	}
+
+.main-left{  /*中间左边部分的外圈大框*/
+	width:65%;
+	height:auto;
+	margin-left:140px;
+	margin-top:10px;
+	background-color:#FFF;/*白色*/
+	font-size:20px;
+	float:left;
+	border-radius:5px;
+	border:1px solid #999;
+	}
+.main-left1{/*中间左边部分第一个标题框*/
+	 /*background-color:rgb(240 250 240);
+	background-color:#1B9E03;*/
+	height:30px;
+	border-bottom:1px solid #999;
+	padding:3px;
+	margin:30px;/*元素边框与周围的距离*/
+}
+.main-left2{
+	max-height:300px;
+	height:280px;/*中间左边第一个内容框*/
+	max-height:300px;
+	/*background-color:#6FF;荧光蓝色*/
+	}	
+.main-left2-1{ /*图片+文字div */
+	width:23%;
+	height:90%;
+	font-size:12px;
+	overflow:hidden;
+	padding-left:15px;
+	/*background-color:#909;深紫色*/
+	float:left;/*使图片横排排列*/
+	}	
+
+.main-left2-1 .main-left2-1-picture img{
+	width:265px;
+	height:190px;
+	vertical-align: middle;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	}
+.main-left2-1 .main-left2-1-picture:hover img{
+	background-color:#000;
+	opacity: 0.5;
+	cursor:pointer;
+	}
+
+/*播放按钮	
+.index_play{
+	background:url(../images/play_icon.gif) 0 0 no-repeat;
+	border:none;
+	cursor:pointer;
+	opactiy:0.1;
+	}*/
+	
+/*歌曲信息*/
+.main-left2-1-text{
+	margin-top:200px;
+	height:30%;
+	font: 12px 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	/*background-color:#FCF;淡粉色*/
+	}
+.main-left2 main-left2-1-text p{
+	overflow: hidden;
+	height: 20px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height: 20px;
+	}
+.music-name{ 
+	margin-top:10px;
+	font-size:18px;
+	color:#000;}
+.musicer-name{ 
+	margin-top:5px;
+	font-size:14px;
+	color:#999;}
+
+/*右边*/
+.main-right{ 
+	width:20%;/*中间右边部分的外圈大框*/
+	height:auto;
+	margin-right:100px;
+	float:right;
+	margin-top:0px;}
+
+.main-right2{
+	height:auto;/*右边第一个内容框*/
+	margin:10px;
+	width:80%;
+	border:1px solid #999;
+	border-radius:5px;/*圆角*/
+	padding:10px;/*元素与其边框的距离*/
+	background-color:#FFF;/*灰白色*/
+	}	
+#p_charts .chart_artsit {
+    width: 640px;
+    float: left;
+}
+.chart_artsit_item-first{
+    position: relative;
+    min-height: 55px;
+    _height: 55px;
+}
+.chart_artsit_item-first a.ico_radio-first {
+    font-size: 14px;
+    background:url(../images/fm_sprite.gif) 0 3px no-repeat;
+    padding-left: 20px;
+    position: absolute;
+	text-decoration:none;/*新加的*/
+    top: 20px;
+    left:70px;
+    line-height: 1.4;
+}
+.chart_artist_item-first a.buddy-first {
+    position: absolute;
+	}
+.main-left2-first .chart_artsit-first li{ 
+	border-bottom: 1px #ebebeb solid;/*表格的下横线*/
+	}
+.main-left2-first .chart_artsit_item-first .private_act-first {
+	position: absolute;
+    top: 20px;
+    right:25px;
+    line-height: 1.4;	
+}
+.main-left1-first{/*中间右边部分第一个标题框*/
+	border-bottom:1px solid #999;
+	padding:3px;
+	/*background-color:rgb(240 250 240);*/
+	height:30px;
+	/*margin:10px;元素边框与周围的距离*/
+}	
+.main-left2-first{
+	padding-top:10px;
+	height:atuo;/*中间左边第一个内容框*/
+	}
+.main-left-text{ 
+	font-size:20px;
+	font:'黑体';
+	}
+
+
+
+/*遮罩层*/
+.text-desc{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color:rgba(0,0,0, 0.5);/*遮罩层颜色  黑色*/
+	height: 100%;
+	width: 100%;
+	}
+.btn{
+	height:59px;
+	width:55px;
+	display: inline-block; 
+	background-image:url(../images/icon-index.png);/*新加的背景按钮图*/
+	background-repeat: no-repeat;
+    background-position: 0 -120px;
+	cursor:pointer;
+	margin-top:20px;
+	margin-right:35px;
+	}
+.port-1{
+	float: left;
+	width: 94%;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	border: 0px solid rgba(255, 255, 255, 0.5);
+	}
+.port-1 .text-desc{
+	color:#000;/*黑色*/
+	padding: 45px 20px 20px;	
+	transition: 0.2s;
+
+}
+.port-1.effect-3 .text-desc{ 
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	padding: 0;
+	}
+.port-1.effect-3:hover .text-desc{
+		width: 100%;
+		top: 0;
+		left: 0;
+		height: 100%;
+		padding: 45px 20px 20px;
+		}/*删除后没有遮罩层*/
+
+
+
+/*底部*/
+.bottom{ background-color:#EBEBEB;/*灰白色*/
+	width:100%;
+	height:100px;
+	margin-top:30px;
+	font-size:24px;
+	float:left;}

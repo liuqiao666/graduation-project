@@ -1,0 +1,295 @@
+	
+	
+/*打赏*/
+*{padding:0px;margin:0px;}
+.pop {  display: none;  width: 600px; min-height: 200px;  max-height: 300px;  height:470px;  position: absolute;  top: 0;  left: 0;  bottom: 0;  right: 0;  margin: auto;  padding: 25px;  z-index: 130;  border-radius: 8px;  background-color: #fff;  box-shadow: 0 3px 18px rgba(100, 0, 0, .5);  }
+.pop-top{  height:40px;  width:100%;  border-bottom: 1px #E5E5E5 solid;  }
+.pop-top h2{  float: left;  display:black}
+.pop-top span{  float: right;  cursor: pointer;  font-weight: bold; display:black}
+.pop-foot{  height:100px;  line-height:50px;  width:100%;  border-top: 1px #E5E5E5 solid;  text-align: right;  }
+.pop-cancel, .pop-ok { font-family:"微软雅黑";height: 35px;  padding:8px 15px;  margin:15px 5px;  border: none;  border-radius: 5px;  background-color: #337AB7;  color: #fff;  cursor:pointer;  }
+.pop-cancel {  background-color: #FFF;  border:1px #CECECE solid;  color: #000;  }
+.pop-content{  height: 200px;  }
+.pop-content-left{  float: left;  }
+.pop-content-right{  width:600px;  float: left;  padding-top:20px;  padding-left:20px;  font-size: 16px;  line-height:60px;  }
+.bgPop{  display: none;  position: absolute;  z-index: 129;  left: 0;  top: 0;  width: 100%;  height: 100%;  background: rgba(0,0,0,.2);  }
+.in{
+border:2px solid #a1a1a1;
+padding:10px 40px; 
+background:#FFFFFF;
+width:150px;
+border-radius:25px;
+box-shadow: none !important;
+outline: none;	
+}
+input{
+		box-shadow: none !important;
+		outline: none;	
+}
+.container{
+	width: 1000px;
+}
+.commentbox{
+	width: 900px;
+	margin: 20px auto;
+}
+.mytextarea {
+    width: 100%;
+    overflow: auto;
+    word-break: break-all;
+    height: 100px;
+    color: #000;
+    font-size: 1em;
+    resize: none;
+}
+.comment-list{
+	width: 900px;
+	margin: 20px auto;
+	clear: both;
+	padding-top: 20px;
+}
+.img{
+    width:100px; 
+    height:100px; 
+    border-radius:200px; 
+}
+
+/*分享页面标签特效*/
+body .particletext {
+  text-align: center;
+  font-size: 28px;
+  position: relative;
+}
+body .particletext.bubbles > .particle {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(33, 150, 243, 0.5);
+  -webkit-animation: bubbles 3s ease-in infinite;
+          animation: bubbles 3s ease-in infinite;
+  border-radius: 100%;
+}
+
+@-webkit-keyframes bubbles {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translate(0, -20%);
+            transform: translate(0, -20%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, -1000%);
+            transform: translate(0, -1000%);
+  }
+}
+
+@keyframes bubbles {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translate(0, -20%);
+            transform: translate(0, -20%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, -1000%);
+            transform: translate(0, -1000%);
+  }
+}
+
+
+/*分享页面图片遮罩层*/
+.text-desc{
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius:5px;
+	background-color:rgba(0,0,0, 0.5);/*遮罩层颜色  黑色*/
+	height: 90%;
+	width: 100%;
+	}
+.btn{
+	height:59px;
+	width:55px;
+	display: inline-block; 
+	background-image:url(../images/icon-index.png);/*新加的背景按钮图*/
+	background-repeat: no-repeat;
+    background-position: 0 -120px;
+	cursor:pointer;
+	margin-top:20px;
+	margin-right:39px;
+	}
+.port-1{
+	float: left;
+	width: 96%;
+	height:100%;
+	position: relative;
+	overflow: hidden;
+	border-radius:5px;
+	text-align: center;
+	border: 0px solid rgba(255, 255, 255, 0.5);
+	}
+.port-1 .text-desc{
+	color:#000;/*黑色*/
+	padding: 45px 20px 20px;	
+	transition: 0.2s;
+
+}
+.port-1.effect-3 .text-desc{ 
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	padding: 0;
+	}
+.port-1.effect-3:hover .text-desc{
+		width: 100%;
+		top: 0;
+		left: 0;
+		height: 100%;
+		padding: 45px 20px 20px;
+		}/*删除后没有遮罩层*/	
+.biaoqian{border:none; background-color:#FFF; color:#999; font-size:16px;padding: 0px 10px;outline: none;cursor: pointer;}
+
+
+/*分享按钮*/
+.share-demo .share img:hover {
+	border-radius:20px;
+    box-shadow: 0 0 5px #BBB;
+}
+/*遮罩层*/
+.share_layer_shade {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/hei.png) repeat;
+    z-index: 99;
+}
+/*整个分享框外框*/
+.share_layer_box {
+    display: none;
+    width: 250px;
+    padding: 20px;
+    background: #fff;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    margin: -30% auto 0;
+}
+.share_layer_box h3 {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 0 10px 0;
+    margin: 0;
+    border-bottom: 1px solid #cccccc;
+}
+.share_layer_box h3 .text {
+    float: left;
+    font-size: 16px;
+    font-family: 'Microsoft JhengHei', 'Microsoft YaHei', Arial, sans-serif;
+    font-weight: 600;
+    color: #62d397;
+    text-indent: 0.5em;
+    display: block;
+}
+.share_layer_box h3 .close {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/close.png) 0 0 no-repeat;
+    float: right;
+    cursor: pointer;
+}
+.share_layer_box h3 .close:hover {
+    background-position: 0 -31px;
+}
+.share_layer_box .layer_content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    position: relative;
+}
+
+/*Share*/
+#Share {
+    text-align: justify;
+}
+.share-demo a img{/*新加的  图标大小*/
+	width:33px;
+	height:33px;
+	}
+#Share ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#Share ul li {
+    float: left;
+    display: block;
+    width: 45px;
+    height: 50px;
+    margin-left: 7px;
+    margin-right: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+#Share ul li a {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin-left: 11px;
+    margin-top: 12px;
+}
+
+#Share ul li span {
+    display: block;
+    width: 40px;
+    height: 10px;
+    background: url(../images/share_shade.png) 0 0 no-repeat;
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+    opacity: 1;
+}
+
+#Share ul li a.share-qq {
+    background: url(../images/share-qzone.png) no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#Share ul li a.share-xl-weiBo {
+    background: url(../images/share-weBo.jpg) no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#Share ul li a.share-people {
+    background: url(../images/share-more-people.jpg) no-repeat left top;
+    background-size: 100% 100%;
+}
+
+#Share ul li a.share-tx-weiBo {
+    background: url(../images/share-qWeBo.jpg) no-repeat left top;
+    background-size: 100% 100%;
+}
+
+
+
